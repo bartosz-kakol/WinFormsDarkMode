@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Reflection.Metadata;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WinFormsDarkMode
+﻿namespace WinFormsDarkMode
 {
     public static class DarkMode
     {
@@ -16,7 +7,7 @@ namespace WinFormsDarkMode
             if (control is Form)
             {
                 int state = 1;
-                Dwm.DwmSetWindowAttribute(control.Handle, Dwm.DWMWINDOWATTRIBUTE.ImmersiveDarkMode, ref state, sizeof(int));
+                _ = Dwm.DwmSetWindowAttribute(control.Handle, Dwm.DWMWINDOWATTRIBUTE.ImmersiveDarkMode, ref state, sizeof(int));
                 control.BackColor = Color.FromArgb(32, 32, 32);
                 control.ForeColor = Color.FromArgb(220, 220, 220);
             }
