@@ -7,9 +7,13 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Title>WinFormsDarkMode</Title>
     <Authors>bartekk</Authors>
+	<PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageTags>windows;forms;dark;mode;controls</PackageTags>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Version>1.2.1</Version>
   </PropertyGroup>
 
+	<ItemGroup>
+		<None Include="../LICENSE" Pack="true" PackagePath=""/>
+	</ItemGroup>
 </Project>
